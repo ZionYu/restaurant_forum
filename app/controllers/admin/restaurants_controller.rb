@@ -4,4 +4,27 @@ class Admin::RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
   end
+
+  def new
+    @restaurant = Restaurant.new   
+  end
+
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+    if @restaurant.save
+      flash[:notice] = "新增餐廳成功！"
+      redirect_to admin_restaurants_path
+    else
+      flash.now[:alert] = "新增失敗！請填入完整資料！"
+      render :new
+    end
+  end
+
+
+  private
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :tel, :address, :opening_hours, :description)
+    
+  end
+
 end
