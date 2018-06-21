@@ -1,8 +1,11 @@
 <h1><%= @restaurant.name %></h1>
 
+<%= image_tag @restaurant.image, width: "600px"  %>
+
 Tel:<%= @restaurant.tel %><br>
 Address:<%= @restaurant.address %><br>
 Opening Hours:<%= @restaurant.opening_hours %><br>
 Description:<%= @restaurant.description %><br>
+
 <br>
 <%= link_to 'Back to Index',admin_restaurants_path %>
