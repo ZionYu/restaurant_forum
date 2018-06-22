@@ -1,11 +1,35 @@
-<h1><%= @restaurant.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @restaurant.name %></h1>
+    </div>
+  </div>
 
-<%= image_tag @restaurant.image, width: "600px"  %>
+    <div class="col-md-4">
+      <%= image_tag @restaurant.image, class: "image-responsive center-block"  %>
+    
+      <br>
+      <div class="well">
+        <ul class="list-unstyled">
+          <li><strong>Tel:</strong><%= @restaurant.tel %></li>
+          <li><strong>Address:</strong><%= @restaurant.address %></li>
+          <li><strong>Opening Hours:</strong><%= @restaurant.opening_hours %></li>
+           
+        </ul>
+      </div>
+    </div>
 
-Tel:<%= @restaurant.tel %><br>
-Address:<%= @restaurant.address %><br>
-Opening Hours:<%= @restaurant.opening_hours %><br>
-Description:<%= @restaurant.description %><br>
+    <div class="col-md-8">
+      <%= simple_format @restaurant.description %>
+    </div>
 
-<br>
-<%= link_to 'Back to Index',admin_restaurants_path %>
+      <div class="clearfix"></div>
+
+
+
+    <hr>
+    <%= link_to 'Back to Index',admin_restaurants_path %>
+  
+  </div>
+</div>
+
