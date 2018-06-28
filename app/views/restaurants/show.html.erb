@@ -6,8 +6,8 @@
     </div>
   </div>
 
-    <div class="col-md-6">
-      <%= image_tag @restaurant.image, class: "image-responsive center-block"  %>
+    <div class="col-md-4">
+      <%= image_tag @restaurant.image,style: 'width: 350px', class: "image-responsive center-block"  %>
     
       <br>
       <div class="well">
@@ -23,7 +23,23 @@
       <%= simple_format @restaurant.description %>
     </div>
 
-      <div class="clearfix"></div>
+    
+
+    <div class="clearfix"></div>
+ 
+    <div>
+      <% @restaurant.comments.each do |comment| %>
+        <div>
+          <h4><%= comment.user.email.split("@").first %></h4>
+          <p><%= simple_format comment.content %></p>
+          <p class="text-muted">
+            <em><%= time_ago_in_words(comment.created_at) %>ago</em></p>
+        </div>
+      <% end %>
+    </div>
+    <hr> 
+<div class="container">
+  <div class="row">
     <%= form_for [@restaurant, @comment] do |f| %>
       <div class="form-group">
         <%= f.text_field :content, placeholder: "留個言吧", class: "form-control" %>
@@ -34,6 +50,8 @@
       </div>
     <% end %>
 
+  </div>
+</div>  
 
 
     <hr>

@@ -6,8 +6,11 @@
     </div>
   </div>
 
-    <div class="col-md-6">
-      <%= image_tag @restaurant.image, class: "image-responsive center-block"  %>
+    <div class="col-md-4">
+      <div class="img-style">
+        <%= image_tag @restaurant.image ,style: 'width: 350px', class: "image-responsive center-block"  %>
+      </div>
+      
     
       <br>
       <div class="well">
@@ -23,7 +26,7 @@
       <%= simple_format @restaurant.description %>
     </div>
 
-      <div class="clearfix"></div>
+    <div class="clearfix"></div>
 
 
 
