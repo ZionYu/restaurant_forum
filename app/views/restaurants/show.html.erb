@@ -24,6 +24,15 @@
     </div>
 
       <div class="clearfix"></div>
+    <%= form_for [@restaurant, @comment] do |f| %>
+      <div class="form-group">
+        <%= f.text_field :content, placeholder: "留個言吧", class: "form-control" %>
+      </div>
+      <div class="form-gorup">
+        <%= f.submit class: "btn btn-primary" %>
+        <%= f.button "cancel", type: :reset, class: "btn btn-default" %>
+      </div>
+    <% end %>
 
 
 
