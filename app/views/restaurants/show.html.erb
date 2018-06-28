@@ -33,7 +33,11 @@
           <h4><%= comment.user.email.split("@").first %></h4>
           <p><%= simple_format comment.content %></p>
           <p class="text-muted">
-            <em><%= time_ago_in_words(comment.created_at) %>ago</em></p>
+            <em><%= time_ago_in_words(comment.created_at) %>ago</em>
+          </p>
+          <% if current_user.admin? %>
+            <%= link_to 'delete', restaurant_comment_path(@restaurant, comment),method: :delete %>
+          <% end %>
         </div>
       <% end %>
     </div>
