@@ -19,5 +19,17 @@
 }
 .nav-pills-center > li{
   float: none;
-  display: inline-block;
+  
 }
+.profile{
+  padding: 100px;
+}
+.col-left, .col-right{
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+}
+.personal-info{
+  padding: 0 30px
+}
+

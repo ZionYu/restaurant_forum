@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="profile">
+        <div class="col-left">
+          <div class="avater">
+            <img src="http://via.placeholder.com/350x350", class: "image-responsive center-block" >
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="personal-info">
+            <h2><%= @user.name %></h2>
+            <p><strong><%= @user.email %></strong></p>
+            <div><%= simple_format(@user.intro) %></div>
+            <%= link_to 'Edit Profile', edit_user_path, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

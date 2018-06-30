@@ -46,7 +46,8 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="pull-right text-right nav navbar-nav">
+          <div class="col-md-10">
+            <ul class="pull-right text-right nav navbar-nav">
               
               <% if current_user %>
                 <% if current_user.admin? %>    
@@ -61,7 +62,9 @@
               <li><%= link_to('登入', new_user_session_path) %></li>
               <% end %>
           
-          </ul>
+            </ul>
+          </div>
+          
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
