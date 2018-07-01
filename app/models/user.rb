@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates_presence_of :name
   mount_uploader :avatar, AvatarUploader
-  has_many :comments
+  has_many :comments, dependent: :restrict_with_error
   has_many :restaurants, through: :comments
 
   
