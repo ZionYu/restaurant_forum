@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="profile">
+        <div class="profile clearfix">
           <div class="col-left">
             <div class="avatar">
-              <%= image_tag @user.avatar, class: "img-responsive img-rounded" %>
+              <%= image_tag @user.avatar, width: "350px", class: "img-responsive img-rounded" %>
             </div>
           </div>
           <div class="col-right">
@@ -21,7 +21,6 @@
       </div>
     </div>
   </div>
-<br>
   <div class="container">
 
     <div class="panel panel-default">

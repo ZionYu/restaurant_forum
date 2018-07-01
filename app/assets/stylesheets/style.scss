@@ -30,9 +30,7 @@
   width: 50%;
   padding: 0 20px;
 }
-.personal-info{
-  padding: 0 30px
-}
+
 
 .my-restaurant, .clearfix{
   content:'';
@@ -41,4 +39,12 @@
 }
 .my-restaurant .img-responsive{
   height: 80px
+}
+
+.avatar .img-responsive{
+  height: 200px;
+  padding: 0 0 0 30px
+}
+.section {
+  padding: 100px
 }
