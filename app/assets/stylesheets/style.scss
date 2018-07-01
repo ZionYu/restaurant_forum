@@ -34,3 +34,11 @@
   padding: 0 30px
 }
 
+.my-restaurant, .clearfix{
+  content:'';
+  display: inline-block;
+  clear: both
+}
+.my-restaurant .img-responsive{
+  height: 80px
+}
