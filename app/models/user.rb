@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :favorited_restaurants, through: :favorites, source: :restaurant
 
+  has_many :likes, dependent: :destroy
+  has_many :liked_restaurants, through: :likes, source: :restaurant
+
   
 
   def admin?
