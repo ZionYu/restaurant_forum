@@ -38,7 +38,7 @@ class RestaurantsController < ApplicationController
     redirect_back(fallback_location: root_path)   
   end
 
-  def unlkie
+  def unlike
     @restaurant = Restaurant.find(params[:id])
     likes = Like.where(restaurant: @restaurant, user: current_user)
     likes.destroy_all
