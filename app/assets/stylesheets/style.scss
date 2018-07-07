@@ -9,6 +9,14 @@
   max-height: 180px;
   width: 100%
 }
+.foodie-item img{
+  max-height: 170px;
+  width:70%
+}
+.foodie-item{
+  text-align: center;
+  margin-bottom: 15px
+}
 
 .restaurant-item .caption{
   padding: 10px
@@ -57,4 +65,7 @@
 }
 .ranking-item{
   margin-bottom: 15px
+}
+button{
+  color: black
 }

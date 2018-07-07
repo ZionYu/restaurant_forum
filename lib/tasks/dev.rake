@@ -22,7 +22,9 @@ namespace :dev do
       user_name = FFaker::Name.first_name
       User.create!(name: user_name,
         email: FFaker::Internet.safe_email,
-        password: 3345678)
+        password: 3345678,
+        avatar: File.open(File.join(Rails.root,'/avatar_img/0.jpg')))
+
     end
     puts "have created fake users"
     puts "now you have #{User.count} users data"
