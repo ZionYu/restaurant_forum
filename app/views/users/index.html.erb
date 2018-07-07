@@ -1,12 +1,8 @@
 <ul>
   <% @users.each do |user| %>
     <li>
-      <%= user.name %>
-      <% if user != current_user %>
-        <%= link_to 'follow', followships_path(following_id: user), method: :post %>
-        <%= link_to 'unfollow', followship_path(user), method: :delete %>
-      <% end %>
-      
+      <%= user.name %>    
+      <%= render partial: "shared/follow", locals: {user: user} %>
     </li>
   <% end %>
 </ul>
