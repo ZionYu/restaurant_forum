@@ -41,6 +41,8 @@ gem 'kaminari'
 gem 'bootstrap-sass','~>3.3.7'
 
 gem 'jquery-rails'
+
+gem 'byebug'
 group :production do
   gem 'pg'
 end
