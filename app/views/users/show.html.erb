@@ -1,4 +1,4 @@
-<div class="section clearfix">
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -29,27 +29,63 @@
       
       </div>
     </div>
-  </div>
-  <div class="container">
+ 
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong><%= @followings.count %></strong> followings</h3>
+        </div>
+        <div class="panel-body">
+          <% @followings.each do |following| %>
+            <%= link_to user_path(following) do %>
+              <table class="table">
+                <%= image_tag following.avatar, width: "40px", class: "img-responsive img-rounded img-circle" %>
+                <%= following.name %>
+              </table>
+            <% end %>  
+          <% end %>
+        </div>     
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong><%= @followers.count %></strong> followers</h3>
+        </div>
+        <div class="panel-body">
+          <% @followers.each do |follower| %>
+            <%= link_to user_path(follower) do %>
+              <table class="table">
+                <%= image_tag follower.avatar, width: "40px", class: "img-responsive img-rounded img-circle" %>
+                <%= follower.name %>
+              </table>
+            <% end %>  
+          <% end %>
+        </div>     
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="panel panel-default">   
+        <div class="panel-heading">
         <h3 class="panel-title"><strong><%= @commented_restaurants.count %></strong>已評論餐廳</h3>
       </div>
-      <div class="panel-body">
-        <% @commented_restaurants.each do |restaurant| %>
-          <%= link_to restaurant_path(restaurant) do %>
-            <div class="my-restaurant clearfix">
-              <%= image_tag restaurant.image, width: "80px", class: "img-responsive img-rounded" %>
-              <%= restaurant.name %>
-            </div>
-          <% end %>  
-        <% end %>
-      </div>     
+        <div class="panel-body">
+          <% @commented_restaurants.each do |restaurant| %>
+            <%= link_to restaurant_path(restaurant) do %>
+             <div class="my-restaurant clearfix">
+                <%= image_tag restaurant.image, width: "80px", class: "img-responsive img-rounded" %>
+                <%= restaurant.name %>
+              </div>
+            <% end %>  
+          <% end %>
+        </div>     
+      </div>
     </div>
+ </div>
+    
+    
    
-  </div>
-</div>
+  
+
 
       
     
