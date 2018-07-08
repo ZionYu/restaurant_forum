@@ -12,6 +12,15 @@
             <div class="personal-info">
               <h2><%= @user.name %></h2>
               <p><strong><%= @user.email %></strong></p>
+              <h3>
+                <small><%= @commented_restaurants.count %>已評論餐廳</small> 
+                <small><%= @favorited_restaurants.count %>收藏的餐廳</small> 
+                <small><%= @followings.count %>followings</small> 
+                <small><%= @followers.count %>followers</small> 
+
+              </h3>
+                
+              
               <div><%= simple_format(@user.intro) %></div>
               <%= link_to 'Edit Profile', edit_user_path, class: "btn btn-primary" %>
             </div>
