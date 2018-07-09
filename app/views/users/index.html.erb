@@ -18,6 +18,7 @@
             <%= link_to user.name, user_path(user) %> <br>
 
             <%= render partial: "shared/follow", locals: {user: user} %>
+            <%= render partial: "shared/friend", locals: {user: user} %>
           </div>
             
         </div>

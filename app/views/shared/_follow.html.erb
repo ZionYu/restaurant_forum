@@ -3,6 +3,7 @@
           <!-- <button  ></button> -->
           <%= link_to 'Unfollow', followships_path(user), method: :delet, class: "btn btn-default" %>
         <% else %>
-          <button class="btn btn-default"><%= link_to 'Follow', followships_path(following_id: user), method: :post %></button>         
+          <%= link_to 'Follow', followships_path(following_id: user), method: :post, class: "btn btn-default" %>       
         <% end %>  
+
     <% end %>
