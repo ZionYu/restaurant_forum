@@ -43,6 +43,14 @@ gem 'bootstrap-sass','~>3.3.7'
 gem 'jquery-rails'
 
 gem 'byebug'
+gem 'simple_ga_reporting'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client'
+gem 'signet'
+gem 'rest-client'
+gem "figaro"
+
 group :production do
   gem 'pg'
 end

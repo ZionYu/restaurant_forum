@@ -1,0 +1,18 @@
+profile_name: 'restaurant_forum'
+dimensions:
+  - pagePath
+  - date
+metrics:
+  - pageviews
+  - users
+filters:
+start_date: 30daysAgo
+end_date: 1daysAgo
+limit: 500
+offset:
+sort:
+  - date
+  - -users
+quota_user:
+sampling_level: HIGHER_PRECISION
+segment_id:

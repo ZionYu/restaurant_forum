@@ -20,5 +20,8 @@ class Restaurant < ApplicationRecord
     self.liked_users.include?(user)
   end
 
+  require 'simple_ga_reporting'
+
+  
 
 end

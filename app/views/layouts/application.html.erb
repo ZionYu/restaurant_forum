@@ -61,6 +61,7 @@
               <li ><%= link_to('註冊', new_user_registration_path) %></li>
               <li><%= link_to('登入', new_user_session_path) %></li>
               <% end %>
+              <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
           
             </ul>
           </div>
