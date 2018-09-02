@@ -255,7 +255,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   
   config.omniauth :google_oauth2, "269717343442-b3ol9p9jvmed4iq1qf2qejnnocp9f3tr.apps.googleusercontent.com", "dVuMD13MwHQJA9D0x-J2vYDh",{
-    scope: 'email profile https://www.googleapis.com/auth/analytics.readonly',
+    scope: 'email profile https://www.googleapis.com/auth/analytics',
     :prompt => "select_account"
   }
 
