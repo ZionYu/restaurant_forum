@@ -258,6 +258,8 @@ Devise.setup do |config|
     scope: 'email profile https://www.googleapis.com/auth/analytics',
     :prompt => "select_account"
   }
+  fb_config = Rails.application.config_for(:facebook)
+  config.omniauth :facebook, "app_id", "secret", scope: "public_profile,email", info_fields: "email,name", callback_url: "https://serene-spire-45100.herokuapp.com/users/auth/facebook/callback"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
